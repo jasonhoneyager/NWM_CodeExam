@@ -1,0 +1,98 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+th {
+    text-align: center;
+}
+
+card {
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+}
+
+.jumbotron {
+    background-image: url("https://thumbs.dreamstime.com/b/fruit-panorama-8752836.jpg");
+    background-size: cover;
+}
+
+    .jumbotron h3 {
+        color: black;
+        text-align: center;
+        background-color: whitesmoke;
+    }
+
+    .jumbotron p {
+        color: black;
+        text-align: center;
+        background-color: whitesmoke;
+    }
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+@media only screen and (min-width : 321px) {
+    /* For smartphones */
+    .col-custom {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-custom {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-custom {
+        width: 33.33%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}

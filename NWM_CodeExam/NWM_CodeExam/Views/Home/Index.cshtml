@@ -1,0 +1,76 @@
+﻿<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<!--body-->
+
+<div class="jumbotron">
+    <br />
+    <br />
+    <br />
+</div>
+<h3 class="text-center">Recipe Quick Search/Filter</h3>
+<h5 class="text-center">Type your query in the search field above, and your filtered results will appear alphabetically below.</h5>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Recipe Search Results
+    </div>   <!--en dof panel-heading -->
+    <div class="panel-body">
+        <!--Start-->
+        <div class="container-fluid" id="CardRow">
+            <!--Card Data inputs here-->
+        </div>
+        <!--Finish-->
+    </div> <!--end of Panel-body -->
+</div> <!--end of Panel -->
+<!--api call-->
+<script>
+    $("#searchterm").keyup(function (e) {
+        var q = $("#searchterm").val();
+        $.ajax({
+            type: "GET",
+            url: "https://api.edamam.com/search",
+            data: { app_id: "9951d975", app_key: "42dfdf67733a399a7573df740748b35a", q: q },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                RecipeArr = [];
+                var recipes = data.hits;
+                $.each(recipes, function (r, recipe) {
+                    var cards = '<div class="col-md-4"><div class="card text-center border-dark"><img class="card-img-top" src = "' + recipe.recipe.image + '"><div class="card-body"><h5 class="card-title">' + recipe.recipe.label + '</h5><p class="card-text">Calories: ' + Math.round(recipe.recipe.calories) + ' cal</p><a href="' + recipe.recipe.url + '" class="btn btn-primary">' + recipe.recipe.source + '</a></div></div></div>';
+                    var newRecipe = { name: recipe.recipe.label, data: cards };
+                    RecipeArr.push(newRecipe);
+                }); //End of foreach Loop
+                SortRecipes();
+            }, //End of AJAX Success
+
+            failure: function (data) {
+                alert(data.responseText);
+            }, //End of AJAX failure
+            error: function (data) {
+                alert(data.responseText);
+            } //End of AJAX error
+        });
+    });
+
+    // Alphabetize Search Results
+    function SortRecipes() {
+        RecipeArr.sort(function (a, b) {
+            var x = a.name.toLowerCase();
+            var y = b.name.toLowerCase();
+            if (x < y) { return -1; }
+            if (x > y) { return 1; }
+            return 0;
+        });
+        console.log(RecipeArr);
+        DisplayRecipes();
+    }
+
+    // Display Sorted Recipe cards
+    function DisplayRecipes() {
+        $('#CardRow').empty();
+        $('#CardRow').append('<div class="card-group">');
+        $.each(RecipeArr, function (c, card) {
+            $('#CardRow').append(card.data);
+        });
+        $('#CardRow').append('</div>');
+    }
+</script>

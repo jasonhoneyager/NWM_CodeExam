@@ -1,0 +1,11 @@
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\bin\Debug\netcoreapp2.0\NWM_CodeExam.deps.json
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\bin\Debug\netcoreapp2.0\NWM_CodeExam.runtimeconfig.json
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\bin\Debug\netcoreapp2.0\NWM_CodeExam.runtimeconfig.dev.json
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\bin\Debug\netcoreapp2.0\NWM_CodeExam.dll
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\obj\Debug\netcoreapp2.0\NWM_CodeExam.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\obj\Debug\netcoreapp2.0\NWM_CodeExam.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\obj\Debug\netcoreapp2.0\NWM_CodeExam.AssemblyInfoInputs.cache
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\obj\Debug\netcoreapp2.0\NWM_CodeExam.AssemblyInfo.cs
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\bin\Debug\netcoreapp2.0\NWM_CodeExam.pdb
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\obj\Debug\netcoreapp2.0\NWM_CodeExam.dll
+C:\Users\Jason\Documents\Repos\NWM_CodeExam\NWM_CodeExam\NWM_CodeExam\obj\Debug\netcoreapp2.0\NWM_CodeExam.pdb
